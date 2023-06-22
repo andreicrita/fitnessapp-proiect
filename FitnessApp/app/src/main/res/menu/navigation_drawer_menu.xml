@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Acasa" />
+
+        <item
+            android:id="@+id/nav_exercises"
+            android:title="Exerciții" />
+
+        <item
+            android:id="@+id/nav_pictures"
+            android:title="Poze" />
+
+        <item
+            android:id="@+id/nav_maps"
+            android:title="Harta" />
+
+        <item
+            android:id="@+id/nav_video"
+            android:title="Video" />
+
+    </group>
+
+
+
+</menu>

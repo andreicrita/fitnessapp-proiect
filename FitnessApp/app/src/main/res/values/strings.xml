@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">FitnessApp</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="search_exercises">Search exercises</string>
+    <string name="bun_venit">Bun venit!</string>
+    <string name="take_a_picture">Camera</string>
+    <string name="share">Share</string>
+
+</resources>

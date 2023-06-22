@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="62dp"
+                android:layout_height="?attr/actionBarSize"
+                app:title="" />
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_toEndOf="@id/toolbar"
+                android:hint="@string/search_exercises"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/grey"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/search_edit_text"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/welcome_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/bun_venit"
+                android:textColor="@color/black"
+                android:textSize="44sp"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/camera_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/take_a_picture"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/photo_image_view"
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                android:layout_below="@+id/camera_button"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/share_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photo_image_view"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/share"
+                android:visibility="gone" />
+
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/toolbar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="80dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/navigation_drawer_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
